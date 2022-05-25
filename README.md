@@ -10,7 +10,7 @@
 
 -------------
 
-## [REPL](https://replit.com/@PROBOY-OP/PRO-LEGENDBOT#main.py)
+## [REPL](https://replit.com/@dominator454/stringforbot?v=1)
 ## ☁️ <a name="self_host"></a>Self Host
 
 ```bash
