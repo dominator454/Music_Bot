@@ -21,7 +21,10 @@ $ cp sample.env .env
 $ sudo docker build . -t musicplayer
 $ sudo docker run musicplayer
 ```
-
+## Support
+   <a href="https://t.me/dominator_bot_official"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/dominator_bot_support"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+  
 ## ⚒ <a name="configs"></a>Configs
 
 - `API_ID`: Telegram app id.
