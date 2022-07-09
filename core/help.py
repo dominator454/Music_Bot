@@ -1,15 +1,19 @@
 import asyncio
 from helpers.filters import command
-from config import BOT_NAME, SUPPORT_GROUP, START_IMG
 from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-
+from config import BOT_NAME, START_IMG, SUPPORT_GROUP
+from pyrogram.types import (
+    Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup)
 
 
 @Client.on_message(command("help") & filters.private & ~filters.group & ~filters.edited)
 async def help_cmd(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAx0CZIiVngABAoCAYqWU-JzBZtfz14vr_DfDkJyy7X8AAjYGAAIsk1lUo7RMhQfOm28eBA")
-    await message.reply_photo(f"{START_IMG}", caption=f"""
+    await message.reply_sticker(
+        "CAACAgUAAx0CZIiVngABAoCAYqWU-JzBZtfz14vr_DfDkJyy7X8AAjYGAAIsk1lUo7RMhQfOm28eBA"
+    )
+    await message.reply_photo(
+        f"{START_IMG}",
+        caption=f"""
 ❄ **ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ {BOT_NAME} :**
 
 ๏ /play : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.
@@ -30,21 +34,18 @@ async def help_cmd(client: Client, message: Message):
 ๏ /rmw : ᴄʟᴇᴀʀs ᴀʟʟ ᴛʜᴇ ᴄᴀᴄʜᴇ ᴩʜᴏᴛᴏs ᴏɴ ᴛʜᴇ ʙᴏᴛ's sᴇʀᴠᴇʀ.
 ๏ /rmp : ᴄʟᴇᴀʀs ᴛʜᴇ ʀᴀᴡ ғɪʟᴇs ᴏғ ᴛʜᴇ ʙᴏᴛ.
 ๏ /rmd : ᴄʟᴇᴀʀs ᴛʜᴇ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ғɪʟᴇs ᴏɴ ᴛʜᴇ ʙᴏᴛ's sᴇʀᴠᴇʀ.""",
-    reply_markup=InlineKeyboardMarkup(
+        reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         "💫 sᴜᴩᴩᴏʀᴛ 💫", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "❄ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ​ ❄", url="https://github.com/dominator454/Music_Bot"
-                    )
+                        "❄ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ​ ❄",
+                        url="https://github.com/dominator454/Music_Bot",
+                    ),
                 ],
-                [
-                    InlineKeyboardButton(
-                        "✨ ᴄʟᴏsᴇ ✨", callback_data="close_play"
-                    )
-                ]
+                [InlineKeyboardButton("✨ ᴄʟᴏsᴇ ✨", callback_data="close_play")],
             ]
-       ),
+        ),
     )
