@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-## MUSIC USERBOT 
+## MUSIC USERBOT + [Assistant bot](https://github.com/dominator454/YoneRobot)
 
 
 ## 🚀 <a name="deploy"></a>Deploy
